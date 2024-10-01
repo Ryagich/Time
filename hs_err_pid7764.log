@@ -1,0 +1,446 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd89db23e5, pid=7764, tid=24256
+#
+# JRE version:  (21.0.3+13) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.3+13-b509.15, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [jimage.dll+0x23e5]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: abort vfprintf -XX:ErrorFile=C:\Users\egora\java_error_in_rider_%p.log -XX:HeapDumpPath=C:\Users\egora\java_error_in_rider.hprof -Xms128m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:CICompilerCount=2 -XX:ReservedCodeCacheSize=512m -XX:+UnlockDiagnosticVMOptions -XX:TieredOldPercentage=100000 -javaagent:C:\Users\egora\things\jetbra\ja-netfilter.jar=jetbrains -Xms128m -Xmx4096m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED -javaagent:C:\Users\egora\things\jetbra\ja-netfilter.jar=jetbrains -Djb.vmOptionsFile=C:\Users\egora\things\jetbra\vmoptions\rider.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=Rider2024.2 -Djna.boot.library.path=C:\Users\egora\AppData\Local\Programs\Rider/lib/jna/amd64 -Dpty4j.preferred.native.folder=C:\Users\egora\AppData\Local\Programs\Rider/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=C:\Users\egora\AppData\Local\Programs\Rider/modules/module-descriptors.jar -Didea.platform.prefix=Rider -Dide.native.launcher=true -Didea.class.before.app=com.jetbrains.rider.protocol.EarlyBackendStarter -Didea.show.customize.ide.wizard=true -DFilePageCache.THROW_ERROR_ON_DUPLICATE_STORAGE_REGISTRATION=false -Dsplash=true -Daether.connector.resumeDownloads=false --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED -Dide.native.launcher=true -Djcef.sandbox.ptr=000002F6543DE970 -Djcef.sandbox.cefVersion=122.1.9+gd14e051+chromium-122.0.6261.94 com.intellij.idea.Main C:\Users\egora\Unity_Projects\Time\Time.sln
+
+Host: AMD Ryzen 9 7950X3D 16-Core Processor          , 32 cores, 63G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+Time: Sun Sep 29 23:19:39 2024 RTZ 4 (s 11 , 64 bit Build 22621 (10.0.22621.3958) elapsed time: 0.014754 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002f654402250):  JavaThread "Unknown thread" [_thread_in_vm, id=24256, stack(0x000000fe3d100000,0x000000fe3d300000) (2048K)]
+
+Stack: [0x000000fe3d100000,0x000000fe3d300000],  sp=0x000000fe3d2fd728,  free space=2037k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [jimage.dll+0x23e5]
+C  [jimage.dll+0x1da8]
+C  [jimage.dll+0x2641]
+V  [jvm.dll+0x225243]
+V  [jvm.dll+0x2241d2]
+V  [jvm.dll+0x834541]
+V  [jvm.dll+0x835602]
+V  [jvm.dll+0x835baf]
+V  [jvm.dll+0x835858]
+V  [jvm.dll+0x8ba59d]
+V  [jvm.dll+0x8ba34a]
+V  [jvm.dll+0x882b42]
+V  [jvm.dll+0x88450d]
+V  [jvm.dll+0x3c5e49]
+V  [jvm.dll+0x86d90d]
+V  [jvm.dll+0x45ab9e]
+V  [jvm.dll+0x45c771]
+C  [rider64.exe+0x3b95e]
+C  [rider64.exe+0x45126]
+C  [rider64.exe+0x2a74c]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5af28]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x000002f7566972f3
+
+
+Registers:
+RAX=0x000000fe3d2fd750, RBX=0x000000fe3d2fd750, RCX=0x000000fe3d2fd750, RDX=0x000002f7566972f3
+RSP=0x000000fe3d2fd728, RBP=0x000000fe3d2fd7f0, RSI=0x00000000ffbf4fef, RDI=0x000002f65440e490
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x00007ffd888e0000, R11=0x000000fe3d2fd750
+R12=0x000002f67d0166d8, R13=0x000002f604bd03d8, R14=0x000000fe3d2fe8b0, R15=0x000002f604bd03f0
+RIP=0x00007ffd89db23e5, EFLAGS=0x0000000000010206
+
+
+Top of Stack: (sp=0x000000fe3d2fd728)
+0x000000fe3d2fd728:   00007ffd89db1da8 000002f7566972f3
+0x000000fe3d2fd738:   000002f65440e490 0000000000000000
+0x000000fe3d2fd748:   000000003d2fd700 0000000000000000
+0x000000fe3d2fd758:   0000000000000000 0000000000000000
+0x000000fe3d2fd768:   0000000000000000 0000000000000000
+0x000000fe3d2fd778:   0000000000000000 0000000000000000
+0x000000fe3d2fd788:   0000000000000000 0000f7ecbf295a87
+0x000000fe3d2fd798:   00007ffd02a07e28 00007ffd031d7ee0
+0x000000fe3d2fd7a8:   000000000000001c 000002f65440e490
+0x000000fe3d2fd7b8:   000000fe3d2fe8b0 000000000000000b
+0x000000fe3d2fd7c8:   00007ffd89db2641 000002f604bfae58
+0x000000fe3d2fd7d8:   00007ffd03007ffa 00007ffd0349fbd8
+0x000000fe3d2fd7e8:   000002f604bfae60 61622e6176616a2f
+0x000000fe3d2fd7f8:   2f6176616a2f6573 7274532f676e616c
+0x000000fe3d2fd808:   6566667542676e69 007373616c632e72
+0x000000fe3d2fd818:   0000000000000000 0000000000000000
+0x000000fe3d2fd828:   000000002fb1e3b8 000002f67d019e40
+0x000000fe3d2fd838:   000002f654402250 0000000000000000
+0x000000fe3d2fd848:   000002f604bfae60 000000fe3d2fe1a8
+0x000000fe3d2fd858:   000000fe3d2fe198 0000000000000000
+0x000000fe3d2fd868:   00007ffd029f5391 0000000000000000
+0x000000fe3d2fd878:   000002f67d019840 000000fe3d2fda70
+0x000000fe3d2fd888:   0000000000000000 0000000000000000
+0x000000fe3d2fd898:   000002f654402250 00007ffd03229268
+0x000000fe3d2fd8a8:   00007ffd02e8d86a 000002f604bda010
+0x000000fe3d2fd8b8:   000002f604bda010 000002f67cfe31c0
+0x000000fe3d2fd8c8:   0000000000000000 0000000800050070
+0x000000fe3d2fd8d8:   00007ffd02ba76a4 000002f604bda010
+0x000000fe3d2fd8e8:   000000fe3d2fda70 0000000000000000
+0x000000fe3d2fd8f8:   000000fe3d2fda70 000000fe3d2fda70
+0x000000fe3d2fd908:   000002f604bd0080 000002f6544ad500
+0x000000fe3d2fd918:   0000000000000000 000000fe3d2fdce0 
+
+Instructions: (pc=0x00007ffd89db23e5)
+0x00007ffd89db22e5:   00 49 8b 0e 48 8d 54 24 20 4c 8b c0 4c 8b f8 e8
+0x00007ffd89db22f5:   f3 fa ff ff 49 8b df 8b fe 85 ed 7e 2c 49 8b 4e
+0x00007ffd89db2305:   08 8b 13 48 8b 01 ff 50 20 85 c0 74 0d 48 83 c3
+0x00007ffd89db2315:   08 83 c7 08 3b fd 7c e5 eb 0f 49 8b 4e 08 8b 53
+0x00007ffd89db2325:   04 48 8b 01 ff 50 20 8b f0 49 8b cf e8 ea 06 00
+0x00007ffd89db2335:   00 49 8b 1e 48 8b 4b 10 8b 53 38 4c 8b 01 41 ff
+0x00007ffd89db2345:   50 20 8b c6 48 03 43 68 48 8b 4c 24 60 48 33 cc
+0x00007ffd89db2355:   e8 66 07 00 00 48 8b 9c 24 b0 00 00 00 48 83 c4
+0x00007ffd89db2365:   70 41 5f 41 5e 5f 5e 5d c3 cc cc 40 53 48 83 ec
+0x00007ffd89db2375:   20 44 8b 01 33 c0 48 8b d9 45 85 c0 74 4e 4c 8b
+0x00007ffd89db2385:   49 08 44 8b d0 49 39 14 c1 74 09 ff c0 41 3b c0
+0x00007ffd89db2395:   72 f0 eb 16 41 8d 40 ff 89 01 49 8b 0c c1 4b 89
+0x00007ffd89db23a5:   0c d1 44 8b 03 45 85 c0 74 22 8b 43 04 83 c0 f8
+0x00007ffd89db23b5:   44 3b c0 75 17 48 8b 4b 08 8b d0 48 c1 e2 03 89
+0x00007ffd89db23c5:   43 04 ff 15 63 1d 00 00 48 89 43 08 48 83 c4 20
+0x00007ffd89db23d5:   5b c3 cc 48 89 5c 24 08 48 8b d9 48 85 d2 74 50
+0x00007ffd89db23e5:   44 8a 02 45 84 c0 74 48 45 8a c8 41 c0 e9 03 45
+0x00007ffd89db23f5:   84 c9 74 3c 41 80 e0 07 33 c9 41 80 c0 01 74 1c
+0x00007ffd89db2405:   4c 8d 52 01 45 0f b6 d8 41 0f b6 02 49 ff c2 48
+0x00007ffd89db2415:   c1 e1 08 48 0b c8 49 83 eb 01 75 ec 41 0f b6 c1
+0x00007ffd89db2425:   48 ff c2 48 89 0c c3 41 0f b6 c0 48 03 d0 75 b0
+0x00007ffd89db2435:   48 8b 5c 24 08 c3 cc 48 89 5c 24 08 48 89 74 24
+0x00007ffd89db2445:   10 57 48 83 ec 20 48 8b d9 48 8b f2 48 8b 49 10
+0x00007ffd89db2455:   49 8b f8 8b 53 38 48 8b 01 ff 50 20 48 8b 53 68
+0x00007ffd89db2465:   45 33 c9 44 8b 46 08 41 b2 2f 4c 03 c2 45 38 08
+0x00007ffd89db2475:   74 3c 44 38 17 0f 85 d8 00 00 00 48 8d 47 01 8a
+0x00007ffd89db2485:   08 84 c9 74 1c 4c 2b c0 45 38 0c 00 74 13 41 3a
+0x00007ffd89db2495:   0c 00 0f 85 bb 00 00 00 48 ff c0 8a 08 84 c9 75
+0x00007ffd89db24a5:   e7 48 8d 78 01 44 38 10 0f 85 a5 00 00 00 8b 46
+0x00007ffd89db24b5:   10 48 03 c2 44 38 08 74 2b 8a 0f 84 c9 74 1b 48
+0x00007ffd89db24c5:   2b c7 44 38 0c 38 74 12 3a 0c 38 0f 85 82 00 00
+0x00007ffd89db24d5:   00 48 ff c7 8a 0f 84 c9 75 e8 8a 07 48 ff c7 41 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002f67d016bb0, length=1, elements={
+0x000002f654402250
+}
+
+Java Threads: ( => current thread )
+=>0x000002f654402250 JavaThread "Unknown thread"             [_thread_in_vm, id=24256, stack(0x000000fe3d100000,0x000000fe3d300000) (2048K)]
+Total: 1
+
+Other Threads:
+  0x000002f67d1374a0 WatcherThread "VM Periodic Task Thread"        [id=14892, stack(0x000000fe3d800000,0x000000fe3d900000) (1024K)]
+  0x000002f656a4bec0 WorkerThread "GC Thread#0"                     [id=24168, stack(0x000000fe3d300000,0x000000fe3d400000) (1024K)]
+  0x000002f67cf82010 ConcurrentGCThread "G1 Main Marker"            [id=8380, stack(0x000000fe3d400000,0x000000fe3d500000) (1024K)]
+  0x000002f67cf82b10 WorkerThread "G1 Conc#0"                       [id=20624, stack(0x000000fe3d500000,0x000000fe3d600000) (1024K)]
+  0x000002f67d00bbc0 ConcurrentGCThread "G1 Refine#0"               [id=9048, stack(0x000000fe3d600000,0x000000fe3d700000) (1024K)]
+  0x000002f67d00c540 ConcurrentGCThread "G1 Service"                [id=11200, stack(0x000000fe3d700000,0x000000fe3d800000) (1024K)]
+Total: 6
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000700000000, size: 4096 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000800000000-0x0000000840000000, reserved size: 1073741824
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x40000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+ CPUs: 32 total, 32 available
+ Memory: 64626M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 2M
+ Heap Min Capacity: 128M
+ Heap Initial Capacity: 128M
+ Heap Max Capacity: 4G
+ Pre-touch: Disabled
+ Parallel Workers: 23
+ Concurrent Workers: 6
+ Concurrent Refinement Workers: 23
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 131072K, used 0K [0x0000000700000000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 0 survivors (0K)
+ Metaspace       used 930K, committed 1024K, reserved 1114112K
+  class space    used 71K, committed 128K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x0000000700000000, 0x0000000700000000, 0x0000000700200000|  0%| F|  |TAMS 0x0000000700000000| PB 0x0000000700000000| Untracked 
+|   1|0x0000000700200000, 0x0000000700200000, 0x0000000700400000|  0%| F|  |TAMS 0x0000000700200000| PB 0x0000000700200000| Untracked 
+|   2|0x0000000700400000, 0x0000000700400000, 0x0000000700600000|  0%| F|  |TAMS 0x0000000700400000| PB 0x0000000700400000| Untracked 
+|   3|0x0000000700600000, 0x0000000700600000, 0x0000000700800000|  0%| F|  |TAMS 0x0000000700600000| PB 0x0000000700600000| Untracked 
+|   4|0x0000000700800000, 0x0000000700800000, 0x0000000700a00000|  0%| F|  |TAMS 0x0000000700800000| PB 0x0000000700800000| Untracked 
+|   5|0x0000000700a00000, 0x0000000700a00000, 0x0000000700c00000|  0%| F|  |TAMS 0x0000000700a00000| PB 0x0000000700a00000| Untracked 
+|   6|0x0000000700c00000, 0x0000000700c00000, 0x0000000700e00000|  0%| F|  |TAMS 0x0000000700c00000| PB 0x0000000700c00000| Untracked 
+|   7|0x0000000700e00000, 0x0000000700e00000, 0x0000000701000000|  0%| F|  |TAMS 0x0000000700e00000| PB 0x0000000700e00000| Untracked 
+|   8|0x0000000701000000, 0x0000000701000000, 0x0000000701200000|  0%| F|  |TAMS 0x0000000701000000| PB 0x0000000701000000| Untracked 
+|   9|0x0000000701200000, 0x0000000701200000, 0x0000000701400000|  0%| F|  |TAMS 0x0000000701200000| PB 0x0000000701200000| Untracked 
+|  10|0x0000000701400000, 0x0000000701400000, 0x0000000701600000|  0%| F|  |TAMS 0x0000000701400000| PB 0x0000000701400000| Untracked 
+|  11|0x0000000701600000, 0x0000000701600000, 0x0000000701800000|  0%| F|  |TAMS 0x0000000701600000| PB 0x0000000701600000| Untracked 
+|  12|0x0000000701800000, 0x0000000701800000, 0x0000000701a00000|  0%| F|  |TAMS 0x0000000701800000| PB 0x0000000701800000| Untracked 
+|  13|0x0000000701a00000, 0x0000000701a00000, 0x0000000701c00000|  0%| F|  |TAMS 0x0000000701a00000| PB 0x0000000701a00000| Untracked 
+|  14|0x0000000701c00000, 0x0000000701c00000, 0x0000000701e00000|  0%| F|  |TAMS 0x0000000701c00000| PB 0x0000000701c00000| Untracked 
+|  15|0x0000000701e00000, 0x0000000701e00000, 0x0000000702000000|  0%| F|  |TAMS 0x0000000701e00000| PB 0x0000000701e00000| Untracked 
+|  16|0x0000000702000000, 0x0000000702000000, 0x0000000702200000|  0%| F|  |TAMS 0x0000000702000000| PB 0x0000000702000000| Untracked 
+|  17|0x0000000702200000, 0x0000000702200000, 0x0000000702400000|  0%| F|  |TAMS 0x0000000702200000| PB 0x0000000702200000| Untracked 
+|  18|0x0000000702400000, 0x0000000702400000, 0x0000000702600000|  0%| F|  |TAMS 0x0000000702400000| PB 0x0000000702400000| Untracked 
+|  19|0x0000000702600000, 0x0000000702600000, 0x0000000702800000|  0%| F|  |TAMS 0x0000000702600000| PB 0x0000000702600000| Untracked 
+|  20|0x0000000702800000, 0x0000000702800000, 0x0000000702a00000|  0%| F|  |TAMS 0x0000000702800000| PB 0x0000000702800000| Untracked 
+|  21|0x0000000702a00000, 0x0000000702a00000, 0x0000000702c00000|  0%| F|  |TAMS 0x0000000702a00000| PB 0x0000000702a00000| Untracked 
+|  22|0x0000000702c00000, 0x0000000702c00000, 0x0000000702e00000|  0%| F|  |TAMS 0x0000000702c00000| PB 0x0000000702c00000| Untracked 
+|  23|0x0000000702e00000, 0x0000000702e00000, 0x0000000703000000|  0%| F|  |TAMS 0x0000000702e00000| PB 0x0000000702e00000| Untracked 
+|  24|0x0000000703000000, 0x0000000703000000, 0x0000000703200000|  0%| F|  |TAMS 0x0000000703000000| PB 0x0000000703000000| Untracked 
+|  25|0x0000000703200000, 0x0000000703200000, 0x0000000703400000|  0%| F|  |TAMS 0x0000000703200000| PB 0x0000000703200000| Untracked 
+|  26|0x0000000703400000, 0x0000000703400000, 0x0000000703600000|  0%| F|  |TAMS 0x0000000703400000| PB 0x0000000703400000| Untracked 
+|  27|0x0000000703600000, 0x0000000703600000, 0x0000000703800000|  0%| F|  |TAMS 0x0000000703600000| PB 0x0000000703600000| Untracked 
+|  28|0x0000000703800000, 0x0000000703800000, 0x0000000703a00000|  0%| F|  |TAMS 0x0000000703800000| PB 0x0000000703800000| Untracked 
+|  29|0x0000000703a00000, 0x0000000703a00000, 0x0000000703c00000|  0%| F|  |TAMS 0x0000000703a00000| PB 0x0000000703a00000| Untracked 
+|  30|0x0000000703c00000, 0x0000000703c00000, 0x0000000703e00000|  0%| F|  |TAMS 0x0000000703c00000| PB 0x0000000703c00000| Untracked 
+|  31|0x0000000703e00000, 0x0000000703e00000, 0x0000000704000000|  0%| F|  |TAMS 0x0000000703e00000| PB 0x0000000703e00000| Untracked 
+|  32|0x0000000704000000, 0x0000000704000000, 0x0000000704200000|  0%| F|  |TAMS 0x0000000704000000| PB 0x0000000704000000| Untracked 
+|  33|0x0000000704200000, 0x0000000704200000, 0x0000000704400000|  0%| F|  |TAMS 0x0000000704200000| PB 0x0000000704200000| Untracked 
+|  34|0x0000000704400000, 0x0000000704400000, 0x0000000704600000|  0%| F|  |TAMS 0x0000000704400000| PB 0x0000000704400000| Untracked 
+|  35|0x0000000704600000, 0x0000000704600000, 0x0000000704800000|  0%| F|  |TAMS 0x0000000704600000| PB 0x0000000704600000| Untracked 
+|  36|0x0000000704800000, 0x0000000704800000, 0x0000000704a00000|  0%| F|  |TAMS 0x0000000704800000| PB 0x0000000704800000| Untracked 
+|  37|0x0000000704a00000, 0x0000000704a00000, 0x0000000704c00000|  0%| F|  |TAMS 0x0000000704a00000| PB 0x0000000704a00000| Untracked 
+|  38|0x0000000704c00000, 0x0000000704c00000, 0x0000000704e00000|  0%| F|  |TAMS 0x0000000704c00000| PB 0x0000000704c00000| Untracked 
+|  39|0x0000000704e00000, 0x0000000704e00000, 0x0000000705000000|  0%| F|  |TAMS 0x0000000704e00000| PB 0x0000000704e00000| Untracked 
+|  40|0x0000000705000000, 0x0000000705000000, 0x0000000705200000|  0%| F|  |TAMS 0x0000000705000000| PB 0x0000000705000000| Untracked 
+|  41|0x0000000705200000, 0x0000000705200000, 0x0000000705400000|  0%| F|  |TAMS 0x0000000705200000| PB 0x0000000705200000| Untracked 
+|  42|0x0000000705400000, 0x0000000705400000, 0x0000000705600000|  0%| F|  |TAMS 0x0000000705400000| PB 0x0000000705400000| Untracked 
+|  43|0x0000000705600000, 0x0000000705600000, 0x0000000705800000|  0%| F|  |TAMS 0x0000000705600000| PB 0x0000000705600000| Untracked 
+|  44|0x0000000705800000, 0x0000000705800000, 0x0000000705a00000|  0%| F|  |TAMS 0x0000000705800000| PB 0x0000000705800000| Untracked 
+|  45|0x0000000705a00000, 0x0000000705a00000, 0x0000000705c00000|  0%| F|  |TAMS 0x0000000705a00000| PB 0x0000000705a00000| Untracked 
+|  46|0x0000000705c00000, 0x0000000705c00000, 0x0000000705e00000|  0%| F|  |TAMS 0x0000000705c00000| PB 0x0000000705c00000| Untracked 
+|  47|0x0000000705e00000, 0x0000000705e00000, 0x0000000706000000|  0%| F|  |TAMS 0x0000000705e00000| PB 0x0000000705e00000| Untracked 
+|  48|0x0000000706000000, 0x0000000706000000, 0x0000000706200000|  0%| F|  |TAMS 0x0000000706000000| PB 0x0000000706000000| Untracked 
+|  49|0x0000000706200000, 0x0000000706200000, 0x0000000706400000|  0%| F|  |TAMS 0x0000000706200000| PB 0x0000000706200000| Untracked 
+|  50|0x0000000706400000, 0x0000000706400000, 0x0000000706600000|  0%| F|  |TAMS 0x0000000706400000| PB 0x0000000706400000| Untracked 
+|  51|0x0000000706600000, 0x0000000706600000, 0x0000000706800000|  0%| F|  |TAMS 0x0000000706600000| PB 0x0000000706600000| Untracked 
+|  52|0x0000000706800000, 0x0000000706800000, 0x0000000706a00000|  0%| F|  |TAMS 0x0000000706800000| PB 0x0000000706800000| Untracked 
+|  53|0x0000000706a00000, 0x0000000706a00000, 0x0000000706c00000|  0%| F|  |TAMS 0x0000000706a00000| PB 0x0000000706a00000| Untracked 
+|  54|0x0000000706c00000, 0x0000000706c00000, 0x0000000706e00000|  0%| F|  |TAMS 0x0000000706c00000| PB 0x0000000706c00000| Untracked 
+|  55|0x0000000706e00000, 0x0000000706e00000, 0x0000000707000000|  0%| F|  |TAMS 0x0000000706e00000| PB 0x0000000706e00000| Untracked 
+|  56|0x0000000707000000, 0x0000000707000000, 0x0000000707200000|  0%| F|  |TAMS 0x0000000707000000| PB 0x0000000707000000| Untracked 
+|  57|0x0000000707200000, 0x0000000707200000, 0x0000000707400000|  0%| F|  |TAMS 0x0000000707200000| PB 0x0000000707200000| Untracked 
+|  58|0x0000000707400000, 0x0000000707400000, 0x0000000707600000|  0%| F|  |TAMS 0x0000000707400000| PB 0x0000000707400000| Untracked 
+|  59|0x0000000707600000, 0x0000000707600000, 0x0000000707800000|  0%| F|  |TAMS 0x0000000707600000| PB 0x0000000707600000| Untracked 
+|  60|0x0000000707800000, 0x0000000707800000, 0x0000000707a00000|  0%| F|  |TAMS 0x0000000707800000| PB 0x0000000707800000| Untracked 
+|  61|0x0000000707a00000, 0x0000000707a00000, 0x0000000707c00000|  0%| F|  |TAMS 0x0000000707a00000| PB 0x0000000707a00000| Untracked 
+|  62|0x0000000707c00000, 0x0000000707c00000, 0x0000000707e00000|  0%| F|  |TAMS 0x0000000707c00000| PB 0x0000000707c00000| Untracked 
+|  63|0x0000000707e00000, 0x0000000707e70aa8, 0x0000000708000000| 22%| E|  |TAMS 0x0000000707e00000| PB 0x0000000707e00000| Complete 
+
+Card table byte_map: [0x000002f67c5f0000,0x000002f67cdf0000] _byte_map_base: 0x000002f678df0000
+
+Marking Bits: (CMBitMap*) 0x000002f656a4c5c0
+ Bits: [0x000002f600000000, 0x000002f604000000)
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (2 events):
+Event: 0.004 Loaded shared library C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\java.dll
+Event: 0.006 Loaded shared library C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\zip.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (20 events):
+Event: 0.011 Loading class java/lang/invoke/CallSite done
+Event: 0.011 Loading class jdk/internal/foreign/abi/NativeEntryPoint
+Event: 0.011 Loading class jdk/internal/foreign/abi/NativeEntryPoint done
+Event: 0.011 Loading class jdk/internal/foreign/abi/ABIDescriptor
+Event: 0.011 Loading class jdk/internal/foreign/abi/ABIDescriptor done
+Event: 0.011 Loading class jdk/internal/foreign/abi/VMStorage
+Event: 0.011 Loading class jdk/internal/foreign/abi/VMStorage done
+Event: 0.011 Loading class jdk/internal/foreign/abi/UpcallLinker$CallRegs
+Event: 0.011 Loading class jdk/internal/foreign/abi/UpcallLinker$CallRegs done
+Event: 0.011 Loading class java/lang/invoke/MethodHandleNatives$CallSiteContext
+Event: 0.011 Loading class java/lang/invoke/MethodHandleNatives$CallSiteContext done
+Event: 0.011 Loading class java/lang/invoke/ConstantCallSite
+Event: 0.011 Loading class java/lang/invoke/ConstantCallSite done
+Event: 0.011 Loading class java/lang/invoke/MutableCallSite
+Event: 0.011 Loading class java/lang/invoke/MutableCallSite done
+Event: 0.011 Loading class java/lang/invoke/VolatileCallSite
+Event: 0.011 Loading class java/lang/invoke/VolatileCallSite done
+Event: 0.011 Loading class java/lang/AssertionStatusDirectives
+Event: 0.011 Loading class java/lang/AssertionStatusDirectives done
+Event: 0.011 Loading class java/lang/StringBuffer
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Thread 0x000002f654402250 Thread added: 0x000002f654402250
+
+
+Dynamic libraries:
+0x00007ff737480000 - 0x00007ff7375ef000 	C:\Users\egora\AppData\Local\Programs\Rider\bin\rider64.exe
+0x00007ffd924d0000 - 0x00007ffd926e7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffd91cf0000 - 0x00007ffd91db4000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffd8fb40000 - 0x00007ffd8feed000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffd913d0000 - 0x00007ffd91482000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffd922c0000 - 0x00007ffd92367000 	C:\Windows\System32\msvcrt.dll
+0x00007ffd923e0000 - 0x00007ffd92489000 	C:\Windows\System32\sechost.dll
+0x00007ffd901d0000 - 0x00007ffd901f8000 	C:\Windows\System32\bcrypt.dll
+0x00007ffd90d40000 - 0x00007ffd90e54000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffd910d0000 - 0x00007ffd911a7000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffd90010000 - 0x00007ffd900aa000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffd8fef0000 - 0x00007ffd90001000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd91960000 - 0x00007ffd91cee000 	C:\Windows\System32\combase.dll
+0x00007ffd8f150000 - 0x00007ffd8f382000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x00007ffd90300000 - 0x00007ffd90b67000 	C:\Windows\System32\SHELL32.dll
+0x00007ffd91510000 - 0x00007ffd916be000 	C:\Windows\System32\USER32.dll
+0x00007ffd8fa50000 - 0x00007ffd8fa76000 	C:\Windows\System32\win32u.dll
+0x00007ffd91260000 - 0x00007ffd91289000 	C:\Windows\System32\GDI32.dll
+0x00007ffd900b0000 - 0x00007ffd901c9000 	C:\Windows\System32\gdi32full.dll
+0x00007ffd8e430000 - 0x00007ffd8e458000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffd84730000 - 0x00007ffd84764000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd8e720000 - 0x00007ffd8e72c000 	C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x00007ffd91390000 - 0x00007ffd913c1000 	C:\Windows\System32\IMM32.DLL
+0x00007ffd8ccc0000 - 0x00007ffd8d5bf000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffd8cb80000 - 0x00007ffd8ccbf000 	C:\Windows\SYSTEM32\wintypes.dll
+0x00007ffd91290000 - 0x00007ffd91389000 	C:\Windows\System32\SHCORE.dll
+0x00007ffd90b70000 - 0x00007ffd90bce000 	C:\Windows\System32\shlwapi.dll
+0x00007ffd8f720000 - 0x00007ffd8f747000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffd8f0c0000 - 0x00007ffd8f0f4000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x00007ffd027e0000 - 0x00007ffd03592000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\server\jvm.dll
+0x00007ffd91490000 - 0x00007ffd91501000 	C:\Windows\System32\WS2_32.dll
+0x00007ffd8f100000 - 0x00007ffd8f14d000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffd86140000 - 0x00007ffd8614a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffd888e0000 - 0x00007ffd888fb000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\VCRUNTIME140.dll
+0x00007ffd8a1b0000 - 0x00007ffd8a1bc000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\VCRUNTIME140_1.dll
+0x00007ffd8ee10000 - 0x00007ffd8ee23000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffd89db0000 - 0x00007ffd89dba000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\jimage.dll
+0x00007ffd8eff0000 - 0x00007ffd8f022000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffd8f7f0000 - 0x00007ffd8f86b000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffd888d0000 - 0x00007ffd888de000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\instrument.dll
+0x00007ffd79c30000 - 0x00007ffd79c48000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\jli.dll
+0x00007ffd79be0000 - 0x00007ffd79bff000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\java.dll
+0x00007ffd7f8e0000 - 0x00007ffd7f993000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.22621.3527_none_b43b7f4b638cc64f\COMCTL32.dll
+0x00007ffd8df90000 - 0x00007ffd8dfa8000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffd79bc0000 - 0x00007ffd79bd8000 	C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\egora\AppData\Local\Programs\Rider\bin;C:\Windows\SYSTEM32;C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin\server;C:\Users\egora\AppData\Local\Programs\Rider\jbr\bin;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.22621.3527_none_b43b7f4b638cc64f
+
+VM Arguments:
+jvm_args: abort vfprintf -XX:ErrorFile=C:\Users\egora\java_error_in_rider_%p.log -XX:HeapDumpPath=C:\Users\egora\java_error_in_rider.hprof -Xms128m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:CICompilerCount=2 -XX:ReservedCodeCacheSize=512m -XX:+UnlockDiagnosticVMOptions -XX:TieredOldPercentage=100000 -javaagent:C:\Users\egora\things\jetbra\ja-netfilter.jar=jetbrains -Xms128m -Xmx4096m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED -javaagent:C:\Users\egora\things\jetbra\ja-netfilter.jar=jetbrains -Djb.vmOptionsFile=C:\Users\egora\things\jetbra\vmoptions\rider.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=Rider2024.2 -Djna.boot.library.path=C:\Users\egora\AppData\Local\Programs\Rider/lib/jna/amd64 -Dpty4j.preferred.native.folder=C:\Users\egora\AppData\Local\Programs\Rider/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=C:\Users\egora\AppData\Local\Programs\Rider/modules/module-descriptors.jar -Didea.platform.prefix=Rider -Dide.native.launcher=true -Didea.class.before.app=com.jetbrains.rider.protocol.EarlyBackendStarter -Didea.show.customize.ide.wizard=true -DFilePageCache.THROW_ERROR_ON_DUPLICATE_STORAGE_REGISTRATION=false -Dsplash=true -Daether.connector.resumeDownloads=false --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED -Dide.native.launcher=true -Djcef.sandbox.ptr=000002F6543DE970 -Djcef.sandbox.cefVersion=122.1.9+gd14e051+chromium-122.0.6261.94 
+java_command: com.intellij.idea.Main C:\Users\egora\Unity_Projects\Time\Time.sln
+java_class_path (initial): C:\Users\egora\AppData\Local\Programs\Rider\lib\platform-loader.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\util-8.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\util.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\app-client.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\util_rt.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\product.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\opentelemetry.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\app.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\product-client.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\lib-client.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\stats.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\jps-model.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\external-system-rt.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\rd.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\bouncy-castle.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\protobuf.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\forms_rt.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\lib.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\externalProcess-rt.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\groovy.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\annotations.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\jsch-agent.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\nio-fs.jar;C:\Users\egora\AppData\Local\Programs\Rider\lib\trove.jar
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {command line}
+     uint ConcGCThreads                            = 6                                         {product} {ergonomic}
+    ccstr ErrorFile                                = $USER_HOME/java_error_in_idea_%p.log            {product} {command line}
+     uint G1ConcRefinementThreads                  = 23                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+     bool HeapDumpOnOutOfMemoryError               = true                                   {manageable} {command line}
+    ccstr HeapDumpPath                             = $USER_HOME/java_error_in_idea.hprof         {manageable} {command line}
+     bool IgnoreUnrecognizedVMOptions              = true                                      {product} {command line}
+   size_t InitialHeapSize                          = 134217728                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4294967296                                {product} {command line}
+   size_t MaxNewSize                               = 2575302656                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 134217728                                 {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5826188                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 265522362                              {pd product} {ergonomic}
+     bool OmitStackTraceInFastThrow                = false                                     {product} {command line}
+    uintx ProfiledCodeHeapSize                     = 265522362                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 536870912                              {pd product} {command line}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4294967296                             {manageable} {ergonomic}
+     intx SoftRefLRUPolicyMSPerMB                  = 50                                        {product} {command line}
+     intx TieredOldPercentage                      = 100000                                 {diagnostic} {command line}
+     bool UnlockDiagnosticVMOptions                = true                                   {diagnostic} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {command line}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\egora\AppData\Local\Microsoft\WindowsApps;C:\Users\egora\AppData\Local\GitHubDesktop\bin;C:\Users\egora\AppData\Local\JetBrains\Toolbox\scripts;
+USERNAME=egora
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD
+TMP=C:\Users\egora\AppData\Local\Temp
+TEMP=C:\Users\egora\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+JNI global refs:
+JNI global refs: 0, weak refs: 0
+
+JNI global refs memory usage: 0, weak refs: 0
+
+Process memory usage:
+Resident Set Size: 20244K (0% of 66177920K total physical memory with 55620836K free physical memory)
+
+OOME stack traces (most recent first):
+Classloader memory used:
+Loader bootstrap                                                                       : 930K
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+OS uptime: 0 days 0:13 hours
+Hyper-V role detected
+
+CPU: total 32 (initial active 32) (32 cores per cpu, 2 threads per core) family 25 model 97 stepping 2 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ss, avx512_ifma
+Processor Information for all 32 processors :
+  Max Mhz: 4201, Current Mhz: 4201, Mhz Limit: 4201
+
+Memory: 4k page, system-wide physical 64626M (54317M free)
+TotalPageFile size 68722M (AvailPageFile size 55250M)
+current process WorkingSet (physical memory assigned to process): 19M, peak: 19M
+current process commit charge ("private bytes"): 226M, peak: 227M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.3+13-b509.15) for windows-amd64 JRE (21.0.3+13-b509.15), built on 2024-09-04 by "builduser" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
