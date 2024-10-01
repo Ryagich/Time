@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public static class TimeFetcher
 {
-    private const string url = "https://yandex.com/time/sync.json";
+    private const string url = "http://3.71.125.123/time";
 
     public static async UniTask<DateTime> FetchTimeFromServer()
     {
